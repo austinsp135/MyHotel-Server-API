@@ -29,7 +29,7 @@ export class PaymentComponent {
             customerId: this.customerId
         }
         data.cardType = parseInt(data.cardType);
-        // data.bookId = parseInt(data.bookId);
+        data.bookId = parseInt(data.bookId);
         console.log(JSON.stringify(data));
 
         this.userService.Payment(data).subscribe({

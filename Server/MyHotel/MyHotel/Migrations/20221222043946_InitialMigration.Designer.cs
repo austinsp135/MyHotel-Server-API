@@ -12,7 +12,7 @@ using MyHotel.Data;
 namespace MyHotel.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221221094027_InitialMigration")]
+    [Migration("20221222043946_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

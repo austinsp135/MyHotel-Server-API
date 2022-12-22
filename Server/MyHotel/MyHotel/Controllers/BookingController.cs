@@ -120,8 +120,8 @@ namespace MyHotel.Controllers
                 CardHolder = model.CardHolder,
                 CardNumber = model.CardNumber,
                 CardType = model.CardType,
-                CVV = "1234",
-                ExpiryDate = "12/2/2034"
+                CVV= model.CVV,
+                ExpiryDate= model.ExpiryDate
 
 
 
