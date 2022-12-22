@@ -1,0 +1,84 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--Card-->
+<br>
+<br>
+<br>
+<div class="card shadow mb-5 bg-white rounded">
+
+    <!--Card-Body-->
+    <div class="card-body">
+
+        <!--Card-Title-->
+        <p class="card-title text-center shadow mb-5 rounded">Room Booking Form</p>
+
+        <div class="icons text-center">
+
+            <i class="bi bi-houses" aria-hidden="true"></i>
+
+
+
+        </div>
+
+        <hr>
+
+        <p class="searchText"><strong>Book Rooms</strong></p>
+
+        <!--First Row-->
+        <div class="row mb-3 mt-3">
+
+            <label class="radiobtn"><input type="radio" name="gender" value="male">Book for Self</label>
+            <label class="radiobtn"><input type="radio" name="gender" value="male">Book for a Friend</label>
+
+        </div>
+
+        <form #form="ngForm" (ngSubmit)="payment(form);">
+
+            <!--Second Row-->
+            <div class="row">
+
+                <div class="col-sm-6">
+                    <div>
+                        <label for="amount">Amount</label>
+                        <input ngModel #amount="ngModel" type="number" name="amount" class="form-control"><!--{{room.amount}}-->
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div>
+                        <label for="cardHolder">CardHolder Name</label>
+                        <input ngModel #cardHolder="ngModel" type="text" name="cardHolder" class="form-control">
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div>
+                        <label for="cardNumber">Card Number</label>
+                        <input ngModel #cardNumber="ngModel" type="number" name="cardNumber" class="form-control">
+                    </div>
+                </div>
+
+            </div>
+            <br>
+
+            <!--Third Row-->
+
+
+            <!--Fourth Row-->
+            <div class="row mt-4">
+
+                <div class="col-sm-6">
+                    <select ngModel #cardType="ngModel" class="browser-default custom-select mb-4" id="select" name="cardType">
+                        <option value="" disabled="" selected="">Card Type</option>
+                        <option value="1">Visa</option>
+                        <option value="2">MasterCard</option>
+                        <option value="3">Rupeey</option>
+                    </select>
+                </div>
+            </div>
+
+
+
+            <button class="btn btn-primary float-right mt-5" style="margin-left:40%">Confirm Booking</button>
+        </form>
+    </div>
+</div>
