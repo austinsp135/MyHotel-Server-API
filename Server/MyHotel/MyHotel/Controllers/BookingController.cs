@@ -135,37 +135,31 @@ namespace MyHotel.Controllers
         }
 
 
-        //[HttpGet]
-        //public IActionResult GetInvoice()
-        //{
-
-        //    [HttpGet]
-        //    public IActionResult Get()
-        //    var result = from person in _db.Payment join detail in _db.Bookings on  equals detail.Person
-        //                 select new
-        //                 {
-        //                     id = person.Id,
-        //                     firstname - person.Firstname,
-        //                     lastname = person.Lastname,
-        //                     detailText = detail.DetailText
-        //                 };
-        //                    return Ok(result);
-        //}           
+        // [HttpGet("Invoice")]
+        // public async Task<IActionResult> Invoice()
+        // {
+        //var bill = await _db.Payments.Include(i => i.Book).Where(i => i.Id == _db.Payments.BookId).FindAsyncAll();
+        //return Ok(bill);
 
 
-        //var result = from paymnent in _db.Payments
-        //             join detail in _db.ApplicationUsers on  equals detail.PersonId
-        //             into Details
-        //             from defaultVal in Details.DefaultIfEmpty()
-        //             select new
-        //             {
-        //                 id = person.Id,
-        //                 firstname = person.Firstname,
-        //                 lastname = person.Lastname,
-        //                 detailText = defaultVal.DetailText
-        //             };
-        //return Ok(result);
-    //}
-}
+
+        // }
+
+
+        [HttpGet("Invoice")]
+        public async Task<IActionResult> Invoice(int Id)
+        {
+            Console.WriteLine(Id);
+            var bill = _db.Payments
+                .Include(m => m.Book)
+                .Where(m => m.Id == Id).ToList();
+
+            return Ok(bill);
+        }
+
+
+
+
+    }
 }
 

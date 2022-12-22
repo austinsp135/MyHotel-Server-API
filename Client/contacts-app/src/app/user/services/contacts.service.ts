@@ -35,4 +35,7 @@ export class ContactsService {
     findRoom(id:any){
         return this.http.get(`${StaticDetails.API_URL}/booking/findroom`,id)
     }
+	invoice() {
+		return this.http.get(`${StaticDetails.API_URL}/booking/invoice`);
+	}
 }
