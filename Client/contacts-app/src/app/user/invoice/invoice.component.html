@@ -1,4 +1,4 @@
-<br>
+<!-- <br>
 <br>
 <br>
 
@@ -109,4 +109,58 @@
         </div>
     </div>
     </div>
+ -->
 
+
+
+
+
+
+ <div class="row   ">
+
+
+
+
+    <div class="card col-sm-2" *ngFor="let invoice of invoice">
+    
+    
+    
+      <div class="hide">invoice</div>
+    
+        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.webp" alt="Card image cap">
+    
+        <div class="card-body ">
+    
+        <h6 class="card-title">{{invoice.firstName}}</h6>
+    
+        <p class="card-title">{{invoice.lastName}}</p>
+    
+        <p class="card-title">{{invoice.address}}</p>
+    
+        <p class="card-title"> {{invoice.amount}}</p>
+    
+        <p class="card-title">{{invoice.CheckIn}}</p>
+
+        <p class="card-title">{{invoice.CheckOut}}</p>
+
+        <p class="card-title">{{invoice.CardHolder}</p>
+
+        <p class="card-title">{{invoice.cardNumber}</p>
+
+        <p class="card-title">{{invoice.cardType}}</p>
+    
+    </div>
+    
+    <div class="card-footer d-flex">
+    
+        <a  class="btn btn-primary" routerLink="/view-bag/{{invoice.id}}">Add to Bag</a>
+    
+    </div>
+    
+     
+    
+       
+    
+      </div>
+    
+    </div>

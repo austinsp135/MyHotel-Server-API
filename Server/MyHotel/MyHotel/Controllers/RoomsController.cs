@@ -28,7 +28,18 @@ namespace MyHotel.Controllers
             return await _context.Rooms.ToListAsync();
         }
 
-  
+
+
+        [HttpGet("GetBooking")]
+        public async Task<ActionResult<IEnumerable<Booking>>> GetBooking()
+        {
+            return await _context.Bookings.ToListAsync();
+        }
+
+
+
+
+
         [HttpGet("{RoomType}")]
         public async Task<ActionResult<Room>> GetRoom(string type)
         {
@@ -105,5 +116,8 @@ namespace MyHotel.Controllers
         {
             return _context.Rooms.Any(e => e.Id == id);
         }
+
+
+        
     }
 }
