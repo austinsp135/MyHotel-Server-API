@@ -52,13 +52,10 @@
             <tr>Room count:{{room.roomCount}}</tr>
             <tr>Rate:{{room.roomRate}}</tr>
             <tr>
-                <a [routerLink]="['/user/booking', room.id]"
-                routerLinkActive="router-link-active">Book Now</a>
-                <button class="btn btn-primary" style="margin-left: 580px;margin-top: -350px;width: 170px;">Book Now</button>
+                <button class="btn btn-primary"><a style="color: black;" [routerLink]="['/user/booking', room.id]"
+                    routerLinkActive="router-link-active">Book Now</a></button>
             </tr>
-            <tr>
-                <button class="btn btn-primary" style="margin-left: 580px;margin-top: -250px;width: 170px;">View Details</button>
-            </tr>
+
         </th>
 
 

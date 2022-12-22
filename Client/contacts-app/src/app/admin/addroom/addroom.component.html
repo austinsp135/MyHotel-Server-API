@@ -1,9 +1,10 @@
 <br>
 <br>
 <br>
+<h2 style="margin-left:43%">Add Rooms</h2>
 <div class="container">
  <div class="row">
-     <form #form="ngForm" (ngSubmit)="save(form);">
+     <form style="    width: 600px;background-color: mintcream;color: teal;" #form="ngForm" (ngSubmit)="save(form); ">
          <div>
              <label for="roomNo">Room No</label>
              <input ngModel #roomNo="ngModel" type="text" name="roomNo" class="form-control">
@@ -31,7 +32,7 @@
          </div>
 
          <div class="d-grid mt-2">
-             <button class="btn btn-primary">Save</button>
+             <button class="btn btn-primary" routerLink="/admin">Save</button>
          </div>
      </form>
  </div>

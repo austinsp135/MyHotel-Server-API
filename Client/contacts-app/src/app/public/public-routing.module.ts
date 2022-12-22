@@ -1,3 +1,4 @@
+import { LoginComponent } from './../auth/login/login.component';
 import { AboutComponent } from './about/about.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -8,7 +9,8 @@ const routes: Routes = [
   {
     path: '', component: PublicLayoutComponent, children: [
       {path: '', component: HomeComponent},
-      {path:'about',component:AboutComponent}
+      {path:'about',component:AboutComponent},
+      {path:'login',component:LoginComponent}
     ]
   },
 ];

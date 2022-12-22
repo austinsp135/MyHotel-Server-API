@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { AuthService } from './../services/auth.service';
 import { NgForm } from '@angular/forms';
 import { Component } from '@angular/core';
@@ -8,12 +9,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-    constructor(private authService:AuthService){
+    constructor(private authService:AuthService,private router:Router){
 
     }
     save(data:NgForm){
         // console.log(data.value);
         this.authService.register(data.value).subscribe(res=>
-            console.log(res)
+
+            this.router.navigate(['/login'])
             );}
 }

@@ -1,3 +1,5 @@
+import { ViewbookingComponent } from './../user/viewbooking/viewbooking.component';
+import { ViewroomComponent } from './viewroom/viewroom.component';
 import { AddroomComponent } from './addroom/addroom.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -8,6 +10,9 @@ const routes: Routes = [
   {path: '', component: AdminLayoutComponent, children:[
     {path: '', component: HomeComponent},
     {path: 'addroom', component: AddroomComponent},
+    {path: 'viewroom', component: ViewroomComponent},
+    {path: 'viewbooking', component: ViewbookingComponent},
+
 
  ]}
 ];

@@ -2,7 +2,7 @@
 <br>
 
 <br>
-<div class="container">
+<!-- <div class="container">
     <div class="row">
         <form #form="ngForm" (ngSubmit)="save(form);">
             <div>
@@ -42,10 +42,44 @@
                 <button class="btn btn-primary">Save</button>
             </div>
 
-            <!-- <div class="mt-2 d-flex justify-content-end">
-                <a routerLink="/auth/register" class="dont">New User- Register</a>
-            </div> -->
+
 
         </form>
     </div>
-</div>
+</div> -->
+
+<div id="login-box" style="height: 600px;background-color: wheat;">
+    <div class="left">
+    <form #form="ngForm" (ngSubmit)="save(form);">
+      <h1>Sign up</h1>
+
+      <input ngModel placeholder="First Name" #firstName="ngModel" type="text" name="firstName" class="form-control">
+      <input ngModel placeholder="Last Name" #lastName="ngModel" type="text" name="lastName" class="form-control">
+      <input ngModel placeholder="Age" #age="ngModel" type="number" name="age" min="18" max="80" class="form-control" required>
+      <input ngModel style="margin-top: 20px;" placeholder="Phone Number" #phoneNumber="ngModel" type="text" name="phoneNumber" class="form-control">
+      <input ngModel placeholder="Aadhar" #aadhar="ngModel" type="text" name="aadhar" class="form-control">
+      <input ngModel placeholder="email" #email="ngModel" type="email" name="email" class="form-control">
+      <input ngModel style="margin-top: 20px;" placeholder="Password" #password="ngModel" type="password" name="password" class="form-control">
+      <input ngModel placeholder="Confirm Password" #cpass="ngModel" type="password" name="cpass" class="form-control">
+
+
+
+
+
+
+
+      <div class="d-grid mt-2">
+        <button class="btn btn-primary">Save</button>
+    </div>
+    </form>
+    </div>
+
+    <div class="right">
+      <span class="loginwith">Sign in with<br />social network</span>
+
+      <button class="social-signin facebook">Log in with facebook</button>
+      <button class="social-signin twitter">Log in with Twitter</button>
+      <button class="social-signin google">Log in with Google+</button>
+    </div>
+    <div class="or">OR</div>
+  </div>
